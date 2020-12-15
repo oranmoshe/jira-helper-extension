@@ -10,7 +10,8 @@ function modifyDOM() {
 	var h1 = document.getElementsByTagName('h1')[0];
 	var aa = document.getElementsByClassName('css-eaycls');        
   return aa[aa.length-1].innerText +"/"+ h1.innerText.replace(/\W/g, '-').replace(/ /g, "-").
-  replace(/---/g, "-").replace(/"/g, "").replace(/'/g, "").toLowerCase();
+  replace(/---/g, "-").
+  replace(/--/g, "-").replace(/"/g, "").replace(/'/g, "").toLowerCase();
 }
 
 chrome.storage.sync.get('color', function(data) {
